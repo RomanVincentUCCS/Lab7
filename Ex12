@@ -2,7 +2,7 @@
 
 <head>
 <meta charset="utf-8" />
-<title>Mapbox Example 12- San Fran Tree</title>
+<title>Mapbox Example 12- Denver Tree</title>
 
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css" rel="stylesheet">
@@ -26,8 +26,8 @@
         // Load a new map in the 'map' HTML div
         var map = new mapboxgl.Map({
             container: 'map', // container id
-            style: 'mapbox://styles/vroman/cm9ezsudv004i01sg740d5ef3', // Put your mapbox style ID here
-            center: [-122.420, 37.777], // starting position [lng, lat]
+            style: 'mapbox://styles/vroman/cm9f4pvve00bu01spavlcgwi3', // Put your mapbox style ID here
+            center: [-104.951046, 39.732470], // starting position [lng, lat]
             zoom: 12 // starting zoom
         });
 
@@ -36,18 +36,18 @@
 
             // Add a TREE POINT layer to the map 
             map.addLayer({
-                'id':'SF_Urban_Tree',
+                'id':'denver_tree_point',
                 'type':'circle',
                 'source':{
                     type:'vector',
-                    url:'mapbox://vroman.1t1tfsk1' // After "mapbox://" paste your Mapbox tileset ID
+                    url:'mapbox://vroman.ca63kzxr' // After "mapbox://" paste your Mapbox tileset ID
                 },
-                'source-layer':'SF_Urban_Tree_Canopy-9czmzi', // name of tilesets
+                'source-layer':'denver_tree_top_10_genus-0j2zyc', // name of tilesets
                 'layout':{
                     'visibility': 'visible'
                 },
                 'paint': {
-                    'circle-color':'#86b049',
+                    'circle-color':'#4b08e7',
                     'circle-opacity':1,
                     'circle-stroke-width':0.5,
                     'circle-stroke-color':'white',          //points on the graph
